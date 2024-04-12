@@ -49,6 +49,9 @@ export default function Wallet() {
     //sending eth
     async function onSend() {
     try {
+    if (!walletProvider) {
+        throw new Error('Wallet provider is not available');
+      }
       const provider = new BrowserProvider(walletProvider);
       const signer = await provider.getSigner();
       const valueInWei = ethers.parseEther(amount);
