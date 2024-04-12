@@ -96,10 +96,14 @@ export default function Wallet() {
   };
 
   //copy clipboard
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(address);
-    alert('Address copied to clipboard!');
-  };
+   const copyToClipboard = () => {
+    if (address) {
+        navigator.clipboard.writeText(address);
+        alert('Address copied to clipboard!');
+    } else {
+        console.error('Address is undefined or null');
+    }
+    };
 
   return (
     <div className=' flex flex-col gap-10'>
@@ -128,7 +132,7 @@ export default function Wallet() {
 
                 <div className=' flex flex-col items-center justify-center gap-1 '>
                     <div onClick={copyToClipboard} className=' flex items-center justify-center gap-2'>
-                        <p onClick={copyToClipboard} className=' text-lg font-medium text-zinc-300'>{truncateAddress(address)}</p>
+                        <p onClick={copyToClipboard} className=' text-lg font-medium text-zinc-300'>{address && truncateAddress(address)}</p>
                         <Image src='/copy.png' width={25} height={25} alt="Copy" />
 
                     </div>
@@ -161,7 +165,7 @@ export default function Wallet() {
                                 </div>
                             </div>
                             <h2 className=' text-lg text-white font-medium'>Sender</h2>
-                            <p className=' text-lg '>{truncateAddress(address)}</p>
+                            <p className=' text-lg '>{address && truncateAddress(address)}</p>
                             <div className=' flex items-center justify-center gap-2 text-lg font-medium text-white'>
                                 <Image src='/eth.png' width={30} height={30} alt="ETH" />
                                 {account && (
