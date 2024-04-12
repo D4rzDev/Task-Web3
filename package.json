@@ -10,8 +10,12 @@
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
+    "@web3modal/ethers": "^4.1.7",
+    "axios": "^1.6.8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.11.1",
     "framer-motion": "^11.0.20",
     "lucide-react": "^0.363.0",
     "next": "14.1.4",
@@ -20,7 +24,9 @@
     "react-dom": "^18",
     "react-icons": "^5.0.1",
     "tailwind-merge": "^2.2.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "web3": "^4.7.0",
+    "web3modal": "^1.9.12"
   },
   "devDependencies": {
     "@types/node": "^20",
