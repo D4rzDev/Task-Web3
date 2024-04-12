@@ -37,6 +37,7 @@ export default function Wallet() {
             const balanceInEther = ethers.formatUnits(response.data.result);
             setAccount(response.data)
             setBalance(balanceInEther);
+            console.log(balanceInEther);
         } catch (error) {
             console.log(error);
         }
