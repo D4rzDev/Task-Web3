@@ -139,11 +139,7 @@ export default function Wallet() {
                     </div>
                     <div className=' flex items-center justify-center gap-2 text-lg font-medium text-white'>
                         <Image src='/eth.png' width={30} height={30} alt="ETH" />
-                         {account && (
-                        <div>
                         <p>{balance}</p>
-                        </div>
-                    )}
                     <p >ETH</p>
                     </div>
                     
@@ -169,11 +165,9 @@ export default function Wallet() {
                             <p className=' text-lg '>{address && truncateAddress(address)}</p>
                             <div className=' flex items-center justify-center gap-2 text-lg font-medium text-white'>
                                 <Image src='/eth.png' width={30} height={30} alt="ETH" />
-                                {account && (
-                                <div>
+                              
                                 <p>{balance}</p>
-                                </div>
-                            )}
+                              
                             <p >ETH</p>
                             </div>
                         </DialogDescription>
