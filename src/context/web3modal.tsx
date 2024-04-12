@@ -45,6 +45,6 @@ createWeb3Modal({
   enableOnramp: true // Optional - false as default
 })
 
-export function Web3Modal({ children }) {
-  return children
+export function Web3Modal({ children }: { children: React.ReactNode }) {
+  return <>{children}</>
 }
